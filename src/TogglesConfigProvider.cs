@@ -35,6 +35,7 @@ namespace Thon.Hotels.FishToggles
         }
         private IEnumerable<ConfigurationValue> GetValues(SqlConnection connection)
         {
+            connection.Open();
             var cmd = new SqlCommand("SELECT [Id], [Value] FROM Toggles;", connection);
             var reader = cmd.ExecuteReader();
 
