@@ -6,6 +6,7 @@ dotnet add package fishtoggles
 
 ### Usage
 Add a call to UseFeatureToggles. Pass in commandline args and a logging delegate. Both can be empty.
+The name of the connection string can be passed in as a third argument. It defaults to "DefaultConnectionString"
 
 ```c#
 public static IWebHost BuildWebHost(string[] args)
